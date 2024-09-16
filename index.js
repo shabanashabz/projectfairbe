@@ -5,6 +5,8 @@ require("dotenv").config();
 // 2) import express module
 const express = require("express");
 
+require('./DB/connections')
+
 // 3)import cors module
 const cors = require("cors");
 
@@ -19,7 +21,7 @@ pfServer.use(express.json());
 pfServer.use(router)
 
 // 7) provide PORT
-const PORT = 4003;
+const PORT = 4005;
 
 // 8) run the server
 pfServer.listen(PORT, () => {
